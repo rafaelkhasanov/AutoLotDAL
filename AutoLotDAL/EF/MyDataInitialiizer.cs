@@ -23,7 +23,7 @@ namespace AutoLotDAL.EF
                new Customer {FirstName = "Bad", LastName = "Customer"}
            };
 
-            customers.ForEach(x => context.Customers.AddOrUpdate(c => new { c.FirstName, c.LastName }, x);
+            customers.ForEach(x => context.Customers.AddOrUpdate(c => new { c.FirstName, c.LastName }, x));
             var cars = new List<Inventory>
             {
                 new Inventory {Make = "VW", Color = "Black", PetName = "Zippy"},
