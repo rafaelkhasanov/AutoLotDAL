@@ -23,7 +23,7 @@ namespace AutoLotDAL.EF
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Inventory>()
-                .HasOptional(e => e.Order)
+                .HasMany(e => e.Orders)
                 .WithRequired(e => e.Inventory)
                 .WillCascadeOnDelete(false);
                 

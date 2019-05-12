@@ -21,6 +21,6 @@ namespace AutoLotDAL.Models
         [StringLength(50)]
         public string PetName { get; set; }
 
-        public virtual Order Order { get; set; }
+        public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
     }
 }

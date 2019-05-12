@@ -13,7 +13,7 @@ namespace AutoLotTestDrive
     {
         static void Main(string[] args)
         {
-            Database.SetInitializer(new MyDataInitialiizer());
+            //Database.SetInitializer(new MyDataInitialiizer());
             Console.WriteLine("Fun with ADO.NET EF Code First \n");
             using (var context = new AutoLotEntities())
             {
