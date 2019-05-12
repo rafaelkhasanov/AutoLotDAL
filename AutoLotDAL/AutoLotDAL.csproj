@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="EF\AutoLotEntities.cs" />
     <Compile Include="EF\MyDataInitialiizer.cs" />
+    <Compile Include="Migrations\201905121125513_Initial.cs" />
+    <Compile Include="Migrations\201905121125513_Initial.Designer.cs">
+      <DependentUpon>201905121125513_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Base\EntityBase.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\InventoryPartial.cs" />
     <Compile Include="Models\CreditRisk.cs" />
@@ -57,7 +63,11 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905121125513_Initial.resx">
+      <DependentUpon>201905121125513_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

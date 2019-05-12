@@ -40,17 +40,17 @@ namespace AutoLotDAL.EF
             context.Inventory.AddOrUpdate(x => new { x.Make, x.Color }, cars.ToArray());
             var orders = new List<Order>
             {
-                new Order {Inventory = cars[0], Customer = customers[0]},
-                new Order {Inventory = cars[1], Customer = customers[1]},
-                new Order {Inventory = cars[2], Customer = customers[2]},
-                new Order {Inventory = cars[3], Customer = customers[3]}
+                new Order {Car = cars[0], Customer = customers[0]},
+                new Order {Car = cars[1], Customer = customers[1]},
+                new Order {Car = cars[2], Customer = customers[2]},
+                new Order {Car = cars[3], Customer = customers[3]}
             };
 
-            orders.ForEach(x => context.Orders.AddOrUpdate(c => new { c.CarId, c.CustId }, x));
+            orders.ForEach(x => context.Orders.AddOrUpdate(c => new { c.CarId, c.CustomerId }, x));
             context.CreditRisks.AddOrUpdate(x => new { x.FirstName, x.LastName },
                 new CreditRisk
                 {
-                    CustId = customers[4].CustID,
+                    Id = customers[4].Id,
                     FirstName = customers[4].FirstName,
                     LastName = customers[4].LastName
                 });

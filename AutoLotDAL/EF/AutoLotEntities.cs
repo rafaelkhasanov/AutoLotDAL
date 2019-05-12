@@ -24,7 +24,7 @@ namespace AutoLotDAL.EF
         {
             modelBuilder.Entity<Inventory>()
                 .HasMany(e => e.Orders)
-                .WithRequired(e => e.Inventory)
+                .WithRequired(e => e.Car)
                 .WillCascadeOnDelete(false);
                 
         }
