@@ -82,7 +82,7 @@ namespace AutoLotTestDrive
         private static void TestConcurrency()
         {
             var repo1 = new InventoryRepo();
-            //Использовать хранилище, чтобы гаранитировать применнеие отличающегося контекста
+            //Использовать хранилище, чтобы гаранитировать применение отличающегося контекста
             var repo2 = new InventoryRepo();
             var car1 = repo1.GetOne(1);
             var car2 = repo2.GetOne(1);
