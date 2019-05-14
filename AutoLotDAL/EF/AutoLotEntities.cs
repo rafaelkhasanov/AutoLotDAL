@@ -47,7 +47,7 @@ namespace AutoLotDAL.EF
         }
         private void ObjectMaterialized(object sender, ObjectMaterializedEventArgs e)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//Comment
         }
 
 
