@@ -10,7 +10,9 @@ namespace AutoLotDAL.Models
     [Table("Inventory")]
     public partial class Inventory : EntityBase
     {
-        [StringLength(50)]
+        
+        [StringLength(50,
+            ErrorMessage = "Please enter value lees than 50 characters long.")]
         public string Make { get; set; }
 
         [StringLength(50)]

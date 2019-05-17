@@ -30,7 +30,7 @@ namespace AutoLotDAL.EF
             var context = sender as ObjectContext;
             if (context == null)
             {
-                return; 
+                return;
             }
             foreach (ObjectStateEntry objectStateEntry in context.ObjectStateManager.GetObjectStateEntries(EntityState.Modified | EntityState.Added))
             {
@@ -45,9 +45,10 @@ namespace AutoLotDAL.EF
                 }
             }
         }
+
         private void ObjectMaterialized(object sender, ObjectMaterializedEventArgs e)
         {
-            throw new NotImplementedException();//Comment
+            //Comment
         }
 
 
@@ -69,7 +70,7 @@ namespace AutoLotDAL.EF
                 .HasMany(e => e.Orders)
                 .WithRequired(e => e.Car)
                 .WillCascadeOnDelete(false);
-                
+
         }
     }
 }
